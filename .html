@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string userInput;
+    cout << "Chatbox: Hi! I'm your chatbox. How can I assist you today?" << endl;
+
+    while (true) {
+        cout << "You: ";
+        getline(cin, userInput);
+
+        // Check for exit command
+        if (userInput == "exit" || userInput == "quit") {
+            cout << "Chatbox: Goodbye! Have a great day!" << endl;
+            break;
+        }
+
+        // Simple responses
+        if (userInput == "hello") {
+            cout << "Chatbox: Hello there! How are you?" << endl;
+        } else if (userInput == "how are you?") {
+            cout << "Chatbox: I'm just a program, so I don't have feelings, but I'm here to help you!" << endl;
+        } else {
+            cout << "Chatbox: I'm sorry, I don't understand that. Can you please rephrase?" << endl;
+        }
+    }
+
+    return 0;
+}
